@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora de Probabilidad</title>
+</head>
+
+<body>
+
+    <h1>PROBABILIDAD DEFINICIÓN Y CÁLCULO</h1>
+
+    <div class="container">
+
+        <h2>Fórmula de la regla de Laplace</h2>
+        <p>La regla de Laplace dice que la probabilidad de que ocurra un suceso es igual al número de casos favorables
+            dividido por el número total de casos posibles. Por lo tanto, para calcular la probabilidad de ocurrencia de
+            un suceso se debe dividir los casos que cumplen con ese suceso por el número de resultados posibles.</p>
+
+        <div class="imagen">
+            <img src="imagenes/img1.png" alt="Fórmula de la regla de Laplace">
+        </div>
+
+        <form id="probabilityForm">
+            <label for="favorable">Caso Favorable:</label>
+            <input type="number" id="favorable" required>
+
+            <label for="posible">Caso Posible:</label>
+            <input type="number" id="posible" required>
+
+            <button type="button" onclick="calcularProbabilidad()">Calcular</button>
+        </form>
+
+        <div id="resultado1">
+            <h3>Resultado:</h3>
+            <p id="probabilidad"></p>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h2>Fórmula de la Probabilidad Condicionada</h2>
+        <p>Es una medida estadística que indica la probabilidad de que ocurra un evento A si otro evento B ha sucedido. Es
+            decir, la probabilidad condicionada P(A|B) se refiere a cuánto de probable es que suceda el evento A una vez
+            ya se ha producido el evento B.</p>
+
+        <div class="imagen">
+            <img src="imagenes/img2.png" alt="Fórmula de la Probabilidad Condicionada">
+        </div>
+
+        <form id="calculator">
+            <label for="inputA">Ingrese el valor de A:</label>
+            <input type="number" id="inputA" placeholder="">
+
+            <label for="inputB">Ingrese el valor de B:</label>
+            <input type="number" id="inputB" placeholder="">
+
+            <button type="button" onclick="calcularProbabilidadCondicionada()">Calcular</button>
+        </form>
+
+        <div id="resultado2">
+            <h3>Resultado:</h3>
+            <p id="result"></p>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <h2>Fórmula de la unión de sucesos</h2>
+        <p>La unión de dos sucesos A y B es el conjunto de sucesos que están en A, en B o en ambos. La unión de dos sucesos se expresa con el símbolo ⋃, así pues, la unión de los sucesos A y B se escribe A⋃B.
+
+            La probabilidad de la unión de dos sucesos es igual a la probabilidad del primer suceso, más la probabilidad del segundo suceso, menos la probabilidad de la intersección de los sucesos</p>
+
+        <div class="imagen">
+            <img src="imagenes/img3.png" alt="Fórmula de la Probabilidad Condicionada">
+        </div>
+
+        <form id="union">
+            <label for="inputAUnion">Ingrese el valor de A:</label>
+            <input type="number" id="inputAUnion" placeholder="">
+
+            <label for="inputBUnion">Ingrese el valor de B:</label>
+            <input type="number" id="inputBUnion" placeholder="">
+
+            <button type="button" onclick="calcularProbabilidadUnion()">Calcular</button>
+        </form>
+
+        <div id="resultado3">
+            <h3>Resultado:</h3>
+            <p id="probabilidadUnion"></p>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h2>Fórmula de la probabilidad de la intersección de dos sucesos Dependientes</h2>
+        <p>La probabilidad de la intersección de dos sucesos es igual a la probabilidad de que ocurra un suceso multiplicado por la probabilidad condicional de que ocurra el otro suceso dado el primer suceso.</p>
+        <p>La probabilidad de la intersección de dos sucesos independientes es igual al producto de las probabilidades de cada suceso.</p>
+        <div class="imagen">
+            <img src="imagenes/img4.png" alt="Fórmula de la Probabilidad Condicionada">
+        </div>
+
+        <div class="imagen">
+            <img src="imagenes/img5.png" alt="Fórmula de la Probabilidad Condicionada">
+        </div>
+    
+        <form id="intersección">
+            <label for="probabilityA">Ingrese P(A):</label>
+            <input type="number" id="probabilityA" placeholder="">
+    
+            <label for="probabilityB">Ingrese P(B):</label>
+            <input type="number" id="probabilityB" placeholder="">
+    
+            <button type="button" onclick="calcularProbabilidadesDependientes()">Calcular</button>
+        </form>
+    
+        <div id="resultado4">
+            <h3>Resultado:</h3>
+            <p id="probabilidadInterseccion"></p>
+            <p id="probabilidadCondicionadaB|A"></p>
+            <p id="probabilidadCondicionadaA|B"></p>
+
+            <p id="probabilidadInterseccion"></p>
+        </div>
+    </div>
+
+    <h1>Daniel Armijos</h1>
+
+
+ 
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
